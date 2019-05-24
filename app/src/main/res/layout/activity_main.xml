@@ -3,6 +3,8 @@
 
     <data>
         <variable name="user" type="com.zanella.logsanddatabinding.User"/>
+        <variable name="bindListener" type="com.zanella.logsanddatabinding.BindListener"/>
+
     </data>
 
     <LinearLayout
@@ -16,19 +18,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="@{user.firstName}"/>
+                android:text="@{user.firstName}" android:fontFamily="casual" android:textSize="24sp"/>
 
         <TextView
                 android:id="@+id/tv_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="@{user.lastName}"/>
+                android:text="@{user.lastName}" android:fontFamily="casual" android:textSize="24sp"/>
 
-        <TextView
+        <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="@{ user.fullName() }"/>
+                android:onClick="@{ (view)-> bindListener.onClickButton( view, user.firstName, user.lastName ) }"
+                android:text="Click me"
+                style="@style/Widget.AppCompat.Button.Colored"/>
     </LinearLayout>
 </layout>

@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
             .setContentView<ActivityMainBinding>( this, R.layout.activity_main )
 
 
-
         val user = User( "Rafael", "Zanella" )
 
         binding.user = user
+        binding.bindListener = BindListener()
+
     }
 
     fun goToUserActivity(view: View){
