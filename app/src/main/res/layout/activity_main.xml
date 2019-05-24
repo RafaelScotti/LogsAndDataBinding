@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             tools:context=".MainActivity">
         <TextView
-                android:text="@{main.userName}"
+                android:text="@{main.nome}"
                 android:layout_width="126dp"
                 android:layout_height="44dp"
                 android:id="@+id/textViewShow" android:textSize="30sp"
@@ -26,6 +26,7 @@
                 android:fontFamily="casual"/>
         <Button
                 android:text="Do Something"
+
                 android:layout_width="143dp"
                 android:layout_height="74dp"
                 android:id="@+id/btnDoSomething"
