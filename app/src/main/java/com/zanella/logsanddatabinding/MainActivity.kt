@@ -1,12 +1,10 @@
 package com.zanella.logsanddatabinding
 
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.zanella.logsanddatabinding.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,12 +22,5 @@ class MainActivity : AppCompatActivity() {
         binding.bindListener = BindListener()
 
     }
-
-    
-    fun goToUserActivity(view: View){
-        val intent = Intent(this, User::class.java)
-        startActivity(intent)
-    }
-
 
 }
