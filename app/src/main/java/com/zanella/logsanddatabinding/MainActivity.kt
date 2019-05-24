@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    
     fun goToUserActivity(view: View){
         val intent = Intent(this, User::class.java)
         startActivity(intent)
